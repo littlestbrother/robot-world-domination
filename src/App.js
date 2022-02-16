@@ -5,12 +5,10 @@ import Register from "./Register";
 import Reset from "./Reset";
 import Dashboard from "./Dashboard";
 
-
 function App() {
   return (
     <div className="app">
       <Router>
-        {/* <h1>Robo World Domination</h1> */}
         <Routes>
           <Route exact path="/" element={<Login />} />
           <Route exact path="/register" element={<Register />} />

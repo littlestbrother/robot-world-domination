@@ -1,4 +1,3 @@
-// import alert from "./alert";
 import { initializeApp } from "firebase/app";
 import {
   GoogleAuthProvider,
@@ -45,7 +44,7 @@ const signInWithGoogle = async () => {
         name: user.displayName,
         authProvider: "google",
         email: user.email,
-        monsterurl: 'none'
+        roboturl: 'none'
       });
     }
   } catch (err) {

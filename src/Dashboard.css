@@ -8,22 +8,33 @@
   justify-content: center;
 }
 
-.dashboard__container {
+.dashboard-container {
   display: flex;
   flex-direction: column;
   text-align: center;
-  background-color: #dcdcdc;
+  background-color: #121212;
   padding: 30px;
 
 }
 
-.dashboard__btn {
+.dashboard-logout {
   padding: 10px;
   font-size: 18px;
-  margin-top: 10px;
-  border: none;
   color: white;
-  background-color: black;
+  width: 150px;
+  margin: 10px;
+}
+
+.dashboard-control {
+  background-color: #30475E;
+}
+
+.dashboard-start {
+  padding: 10px;
+  font-size: 18px;
+  color: white;
+  width: 400px;
+  margin: 10px;
 }
 
 .dashboard div {
