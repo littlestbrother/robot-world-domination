@@ -1,3 +1,4 @@
+// import alert from "./alert";
 import { initializeApp } from "firebase/app";
 import {
   GoogleAuthProvider,

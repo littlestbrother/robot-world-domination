@@ -6,6 +6,7 @@ import { auth, db, logout } from "./firebase";
 import { query, collection, getDocs, where } from "firebase/firestore";
 import CreateMonster from './components/CreateMonster';
 import GameBoard from './components/GameBoard';
+// import alert from "./alert";
 
 function Dashboard() {
   const [user, loading, error] = useAuthState(auth);
