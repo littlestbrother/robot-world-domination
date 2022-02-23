@@ -1,8 +1,7 @@
-import { React, useState, useEffect } from "react";
-import { getDocs, collection, query, where, doc, updateDoc } from "firebase/firestore";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { auth, db, logout } from "../firebase";
-import { onAuthStateChanged } from "firebase/auth";
+import { React, useState } from "react";
+import { doc, updateDoc } from "firebase/firestore";
+import { db, logout } from "../firebase";
+import Gameboard from "./Gameboard";
 
 
 const CreateRobot = (props) => {
@@ -10,18 +9,25 @@ const CreateRobot = (props) => {
   
   const roboPicture = () => {
     if (word === "") { 
-      return <img src={`https://www.robohash.org/example`} className="nes-container is-dark with-title is-rounded"/>;
+      return <img src={`https://www.robohash.org/example`} className="nes-container is-dark with-title is-rounded" alt="a robot"/>;
     } else {
-      return <img src={`https://www.robohash.org/${word}`} className="nes-container is-dark with-title is-rounded"/>;
+      return <img src={`https://www.robohash.org/${word}`} className="nes-container is-dark with-title is-rounded" alt="a robot"/>;
     }
   };
 
 
   const saveRobot = async () => {
+    if(word){
     const userRef = doc(db, 'users', props.userId);
     await updateDoc(userRef, {
       roboturl: `https://www.robohash.org/${word}`
     })
+    return(
+      <Gameboard/>
+    )
+  } else {
+    alert("are you dense? what's your name?")
+  }
   };
 
   return (

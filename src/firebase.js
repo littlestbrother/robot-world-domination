@@ -43,8 +43,7 @@ const signInWithGoogle = async () => {
         uid: user.uid,
         name: user.displayName,
         authProvider: "google",
-        email: user.email,
-        roboturl: 'none'
+        email: user.email
       });
     }
   } catch (err) {
